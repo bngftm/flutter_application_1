@@ -104,24 +104,29 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            Text("Hello world",
-              textAlign: TextAlign.left,
-            ),
-            Text("Hello world! I'm Jack. "*4,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-            ),
-            Text("Hello world",
-              textScaleFactor: 1.5,
-            ),
-            ElevatedButton(
-              child: Text("选择"),
-              onPressed: () {},
+            Text("这是一个计数器",
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 18.0,
+                height: 1.2,  
+                fontFamily: "Courier",
+                background: Paint()..color=Colors.yellow,
+                decoration:TextDecoration.underline,
+                decorationStyle: TextDecorationStyle.dashed
+              ),
             ),
             IconButton(
               icon: Icon(Icons.thumb_up),
               onPressed: () {},
-            )
+            ),
+            Image.network(
+              "https://p2.ssl.qhimgs1.com/sdr/400__/t01eef41fecd78bc0c8.jpg",
+              width: 100.0,
+            ),
+            LinearProgressIndicator(
+              backgroundColor: Colors.grey[200],
+              valueColor: AlwaysStoppedAnimation(Colors.blue),
+            ),
           ],
         ),
       ),
